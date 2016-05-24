@@ -16,5 +16,10 @@ namespace JAT___Final_Project___Image_Retrieval
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //this.ActiveControl = null;
+        }
     }
 }
