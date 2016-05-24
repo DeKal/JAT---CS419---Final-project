@@ -8,6 +8,36 @@ namespace JAT___Final_Project___Image_Retrieval
 {
     static class Program
     {
+        static SearchForm searchForm;
+       
+        static ResultForm currentResultForm;
+
+        public static ResultForm CurrentResultForm
+        {
+            get
+            {
+                return currentResultForm;
+            }
+
+            set
+            {
+                currentResultForm = value;
+            }
+        }
+
+        public static SearchForm SearchForm
+        {
+            get
+            {
+                return searchForm;
+            }
+
+            set
+            {
+                searchForm = value;
+            }
+        }
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +46,9 @@ namespace JAT___Final_Project___Image_Retrieval
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            searchForm = new SearchForm();
+            Application.Run(SearchForm);
         }
     }
 }
