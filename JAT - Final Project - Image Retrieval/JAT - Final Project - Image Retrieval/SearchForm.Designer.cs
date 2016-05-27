@@ -97,7 +97,7 @@
             // 
             this.splitContainer2.Panel2.Controls.Add(this.tableLayoutPanel2);
             this.splitContainer2.Size = new System.Drawing.Size(1221, 562);
-            this.splitContainer2.SplitterDistance = 512;
+            this.splitContainer2.SplitterDistance = 511;
             this.splitContainer2.SplitterWidth = 5;
             this.splitContainer2.TabIndex = 0;
             // 
@@ -110,7 +110,7 @@
             this.img_search.Location = new System.Drawing.Point(0, 0);
             this.img_search.Margin = new System.Windows.Forms.Padding(4);
             this.img_search.Name = "img_search";
-            this.img_search.Size = new System.Drawing.Size(1221, 512);
+            this.img_search.Size = new System.Drawing.Size(1221, 511);
             this.img_search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.img_search.TabIndex = 0;
             this.img_search.TabStop = false;
@@ -128,7 +128,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1221, 45);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1221, 46);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // btn_upload
@@ -137,10 +137,11 @@
             this.btn_upload.Location = new System.Drawing.Point(506, 4);
             this.btn_upload.Margin = new System.Windows.Forms.Padding(4);
             this.btn_upload.Name = "btn_upload";
-            this.btn_upload.Size = new System.Drawing.Size(100, 37);
+            this.btn_upload.Size = new System.Drawing.Size(100, 38);
             this.btn_upload.TabIndex = 0;
             this.btn_upload.Text = "Upload";
             this.btn_upload.UseVisualStyleBackColor = true;
+            this.btn_upload.Click += new System.EventHandler(this.btn_upload_Click);
             // 
             // btn_search
             // 
@@ -148,7 +149,7 @@
             this.btn_search.Location = new System.Drawing.Point(614, 4);
             this.btn_search.Margin = new System.Windows.Forms.Padding(4);
             this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(100, 37);
+            this.btn_search.Size = new System.Drawing.Size(100, 38);
             this.btn_search.TabIndex = 1;
             this.btn_search.Text = "Search";
             this.btn_search.UseVisualStyleBackColor = true;

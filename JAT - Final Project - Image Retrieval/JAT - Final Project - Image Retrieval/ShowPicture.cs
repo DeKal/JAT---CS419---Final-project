@@ -16,7 +16,10 @@ namespace JAT___Final_Project___Image_Retrieval
         {
             InitializeComponent();
         }
-
+        public void SetImageUpload(string link)
+        {
+            fileUploadPicture.Image = Image.FromFile(link);
+        }
         
     }
 }

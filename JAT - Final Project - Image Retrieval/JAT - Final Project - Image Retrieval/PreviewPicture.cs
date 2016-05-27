@@ -16,5 +16,9 @@ namespace JAT___Final_Project___Image_Retrieval
         {
             InitializeComponent();
         }
+        public void AddPicture(string link)
+        {
+
+        }
     }
 }

@@ -30,10 +30,10 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.uploadDeleteView1 = new JAT___Final_Project___Image_Retrieval.UploadSearchRedirect();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.fileUploadPicture = new System.Windows.Forms.PictureBox();
+            this.fileResultPicture = new System.Windows.Forms.PictureBox();
+            this.uploadDeleteView1 = new JAT___Final_Project___Image_Retrieval.UploadSearchRedirect();
             this.previewPicture1 = new JAT___Final_Project___Image_Retrieval.PreviewPicture();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -41,8 +41,8 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileUploadPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileResultPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -77,15 +77,6 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(984, 218);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
-            // uploadDeleteView1
-            // 
-            this.uploadDeleteView1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.uploadDeleteView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uploadDeleteView1.Location = new System.Drawing.Point(3, 170);
-            this.uploadDeleteView1.Name = "uploadDeleteView1";
-            this.uploadDeleteView1.Size = new System.Drawing.Size(978, 45);
-            this.uploadDeleteView1.TabIndex = 0;
-            // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -94,32 +85,43 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.pictureBox1);
+            this.splitContainer1.Panel1.Controls.Add(this.fileUploadPicture);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.pictureBox2);
+            this.splitContainer1.Panel2.Controls.Add(this.fileResultPicture);
             this.splitContainer1.Size = new System.Drawing.Size(984, 412);
             this.splitContainer1.SplitterDistance = 486;
             this.splitContainer1.TabIndex = 2;
             // 
-            // pictureBox1
+            // fileUploadPicture
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(486, 412);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.fileUploadPicture.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fileUploadPicture.Location = new System.Drawing.Point(0, 0);
+            this.fileUploadPicture.Name = "fileUploadPicture";
+            this.fileUploadPicture.Size = new System.Drawing.Size(486, 412);
+            this.fileUploadPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.fileUploadPicture.TabIndex = 0;
+            this.fileUploadPicture.TabStop = false;
             // 
-            // pictureBox2
+            // fileResultPicture
             // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(494, 412);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.fileResultPicture.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fileResultPicture.Location = new System.Drawing.Point(0, 0);
+            this.fileResultPicture.Name = "fileResultPicture";
+            this.fileResultPicture.Size = new System.Drawing.Size(494, 412);
+            this.fileResultPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.fileResultPicture.TabIndex = 0;
+            this.fileResultPicture.TabStop = false;
+            // 
+            // uploadDeleteView1
+            // 
+            this.uploadDeleteView1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.uploadDeleteView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uploadDeleteView1.Location = new System.Drawing.Point(3, 170);
+            this.uploadDeleteView1.Name = "uploadDeleteView1";
+            this.uploadDeleteView1.Size = new System.Drawing.Size(978, 45);
+            this.uploadDeleteView1.TabIndex = 0;
             // 
             // previewPicture1
             // 
@@ -145,8 +147,8 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileUploadPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileResultPicture)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -157,8 +159,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private UploadSearchRedirect uploadDeleteView1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox fileUploadPicture;
+        private System.Windows.Forms.PictureBox fileResultPicture;
         private PreviewPicture previewPicture1;
     }
 }

@@ -12,14 +12,46 @@ namespace JAT___Final_Project___Image_Retrieval
 {
     public partial class ResultForm : Form
     {
-        public ResultForm()
+        private string uploadPicLink;
+        public ResultForm(string uploadPicLink = null)
         {
             InitializeComponent();
+            this.UploadPicLink = uploadPicLink;
+            if (uploadPicLink != null)
+            {
+                showPicture.SetImageUpload(uploadPicLink);
+            }
         }
 
         private void ResultForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             //Application.Exit();
+        }
+
+
+        //hide the exit button
+        private const int CP_NOCLOSE_BUTTON = 0x200;
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams myCp = base.CreateParams;
+                myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
+                return myCp;
+            }
+        }
+
+        public string UploadPicLink
+        {
+            get
+            {
+                return uploadPicLink;
+            }
+
+            set
+            {
+                uploadPicLink = value;
+            }
         }
     }
 }

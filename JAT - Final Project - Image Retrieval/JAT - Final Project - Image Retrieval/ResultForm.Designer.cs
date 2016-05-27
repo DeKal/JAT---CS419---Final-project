@@ -30,7 +30,7 @@
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.title1 = new JAT___Final_Project___Image_Retrieval.Title();
-            this.showPicture1 = new JAT___Final_Project___Image_Retrieval.ShowPicture();
+            this.showPicture = new JAT___Final_Project___Image_Retrieval.ShowPicture();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -54,7 +54,7 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.showPicture1);
+            this.splitContainer1.Panel2.Controls.Add(this.showPicture);
             this.splitContainer1.Size = new System.Drawing.Size(1168, 574);
             this.splitContainer1.SplitterDistance = 113;
             this.splitContainer1.SplitterWidth = 1;
@@ -68,15 +68,15 @@
             this.title1.Size = new System.Drawing.Size(1166, 111);
             this.title1.TabIndex = 0;
             // 
-            // showPicture1
+            // showPicture
             // 
-            this.showPicture1.BackColor = System.Drawing.SystemColors.Control;
-            this.showPicture1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.showPicture1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.showPicture1.Location = new System.Drawing.Point(0, 0);
-            this.showPicture1.Name = "showPicture1";
-            this.showPicture1.Size = new System.Drawing.Size(1166, 458);
-            this.showPicture1.TabIndex = 0;
+            this.showPicture.BackColor = System.Drawing.SystemColors.Control;
+            this.showPicture.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.showPicture.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.showPicture.Location = new System.Drawing.Point(0, 0);
+            this.showPicture.Name = "showPicture";
+            this.showPicture.Size = new System.Drawing.Size(1166, 458);
+            this.showPicture.TabIndex = 0;
             // 
             // ResultForm
             // 
@@ -102,6 +102,6 @@
 
         private System.Windows.Forms.SplitContainer splitContainer1;
         private Title title1;
-        private ShowPicture showPicture1;
+        private ShowPicture showPicture;
     }
 }
