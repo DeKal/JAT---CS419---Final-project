@@ -34,7 +34,7 @@ namespace JAT___Final_Project___Image_Retrieval
                 return;
             }
 
-            // add new column
+            // increase count
             ++tb_layout_preview.ColumnCount;
 
             // add new column style
