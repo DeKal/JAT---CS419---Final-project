@@ -69,5 +69,15 @@ namespace JAT___Final_Project___Image_Retrieval.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] retriever {
+            get {
+                object obj = ResourceManager.GetObject("retriever", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }

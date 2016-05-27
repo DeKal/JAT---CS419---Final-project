@@ -127,6 +127,8 @@
     <EmbeddedResource Include="UploadSearchRedirect.resx">
       <DependentUpon>UploadSearchRedirect.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="bin\Debug\code\retriever.pyc" />
+    <None Include="bin\Debug\code\tfidf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -136,8 +138,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Resources\retriever.pyc" />
-    <None Include="Resources\tfidf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -161,10 +161,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\retrieve.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\retriever.py" />
+    <None Include="bin\Debug\code\retriever.py" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
