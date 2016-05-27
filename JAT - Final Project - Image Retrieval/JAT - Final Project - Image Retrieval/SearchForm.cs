@@ -13,6 +13,7 @@ namespace JAT___Final_Project___Image_Retrieval
     public partial class SearchForm : Form
     {
         private String currentFileUploadLink = null;
+        private Image currentImage = null;
         public SearchForm()
         {
             InitializeComponent();
@@ -20,6 +21,16 @@ namespace JAT___Final_Project___Image_Retrieval
 
         private void btn_search_Click(object sender, EventArgs e)
         {
+            // check if has picture
+            if(currentFileUploadLink == null)
+            {
+                MessageBox.Show("Please add picture.", "Error");
+                return;
+            }
+
+            // logic
+
+            // show result
             this.Hide();
             Program.CurrentResultForm = new ResultForm(currentFileUploadLink);
             Program.CurrentResultForm.Show(); 
@@ -38,7 +49,7 @@ namespace JAT___Final_Project___Image_Retrieval
             OpenFileDialog dialog = new OpenFileDialog();
  
             dialog.Filter =
-               "Image Files(*.bmp, *.jpg) | *.bmp; *.jpg; *.JPG | All files (*.*)|*.*";
+               "Image Files(*.bmp, *.jpg) | *.bmp; *.jpg; *.JPG";
            
 
             dialog.InitialDirectory = "C:";
@@ -49,7 +60,8 @@ namespace JAT___Final_Project___Image_Retrieval
                 currentFileUploadLink =  dialog.FileName;
             if (currentFileUploadLink == null)
                 return; //user didn't select a file to opena
-            img_search.Image = Image.FromFile(currentFileUploadLink);
+            currentImage = Image.FromFile(currentFileUploadLink);
+            img_search.Image = currentImage;
 
 
         }

@@ -19,7 +19,6 @@ namespace JAT___Final_Project___Image_Retrieval
 
         private void btn_search_Click(object sender, EventArgs e)
         {
-           
 
         }
 
@@ -27,7 +26,6 @@ namespace JAT___Final_Project___Image_Retrieval
         {
             Program.SearchForm.Show();
             Program.CurrentResultForm.Close();
-
         }
     }
 }

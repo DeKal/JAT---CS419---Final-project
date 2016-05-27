@@ -44,7 +44,6 @@
             this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.splitContainer1.IsSplitterFixed = true;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -55,7 +54,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.showPicture);
-            this.splitContainer1.Size = new System.Drawing.Size(1168, 574);
+            this.splitContainer1.Size = new System.Drawing.Size(876, 466);
             this.splitContainer1.SplitterDistance = 113;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 0;
@@ -64,8 +63,9 @@
             // 
             this.title1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.title1.Location = new System.Drawing.Point(0, 0);
+            this.title1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.title1.Name = "title1";
-            this.title1.Size = new System.Drawing.Size(1166, 111);
+            this.title1.Size = new System.Drawing.Size(874, 111);
             this.title1.TabIndex = 0;
             // 
             // showPicture
@@ -74,21 +74,23 @@
             this.showPicture.Dock = System.Windows.Forms.DockStyle.Fill;
             this.showPicture.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.showPicture.Location = new System.Drawing.Point(0, 0);
+            this.showPicture.Margin = new System.Windows.Forms.Padding(2);
             this.showPicture.Name = "showPicture";
-            this.showPicture.Size = new System.Drawing.Size(1166, 458);
+            this.showPicture.Size = new System.Drawing.Size(874, 350);
             this.showPicture.TabIndex = 0;
             // 
             // ResultForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1168, 574);
+            this.ClientSize = new System.Drawing.Size(876, 466);
             this.Controls.Add(this.splitContainer1);
             this.DoubleBuffered = true;
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ResultForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ResultForm";
+            this.Text = "Result";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ResultForm_FormClosed);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
