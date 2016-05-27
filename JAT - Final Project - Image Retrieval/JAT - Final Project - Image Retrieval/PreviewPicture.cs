@@ -16,7 +16,6 @@ namespace JAT___Final_Project___Image_Retrieval
         public PreviewPicture()
         {
             InitializeComponent();
-            tb_layout_preview.GrowStyle = TableLayoutPanelGrowStyle.AddColumns;
         }
 
         public void AddPicture(Image picture)
@@ -31,6 +30,7 @@ namespace JAT___Final_Project___Image_Retrieval
             {
                 // add control
                 tb_layout_preview.Controls.Add(temp, 0, 0);
+                init = true;
                 return;
             }
 
