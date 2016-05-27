@@ -1,9 +1,13 @@
-﻿using System;
+﻿
+using JAT___Final_Project___Image_Retrieval.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,11 +18,27 @@ namespace JAT___Final_Project___Image_Retrieval
     {
         private String currentFileUploadLink = null;
         private Image currentImage = null;
+
+
         public SearchForm()
         {
             InitializeComponent();
+            
         }
-
+        private void LoadPythonScript(string imgLink)
+        {
+            string path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            var process = new System.Diagnostics.Process();
+            
+            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+            startInfo.WorkingDirectory = path+"\\code";
+            startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+            startInfo.FileName = "cmd.exe";
+            startInfo.Arguments = "/c python retriever.py " + imgLink;
+            process.StartInfo = startInfo;
+            process.Start();
+            process.WaitForExit();
+        }
         private void btn_search_Click(object sender, EventArgs e)
         {
             // check if has picture
@@ -29,7 +49,7 @@ namespace JAT___Final_Project___Image_Retrieval
             }
 
             // logic
-
+            LoadPythonScript(currentFileUploadLink);
             // show result
             this.Hide();
             Program.CurrentResultForm = new ResultForm(currentFileUploadLink);
@@ -62,7 +82,7 @@ namespace JAT___Final_Project___Image_Retrieval
                 return; //user didn't select a file to opena
             currentImage = Image.FromFile(currentFileUploadLink);
             img_search.Image = currentImage;
-
+            
 
         }
     }
