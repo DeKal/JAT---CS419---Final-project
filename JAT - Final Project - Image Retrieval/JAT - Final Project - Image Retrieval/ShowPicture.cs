@@ -21,22 +21,15 @@ namespace JAT___Final_Project___Image_Retrieval
             Image temp = Image.FromFile(link);
             fileUploadPicture.Image = temp;
             previewPicture.AddPicture(temp);
-            previewPicture.AddPicture(Image.FromFile("Z:\\2.jpg"));
-            previewPicture.AddPicture(Image.FromFile("Z:\\3.jpg"));
-            previewPicture.AddPicture(Image.FromFile("Z:\\4.jpg"));
-            previewPicture.AddPicture(Image.FromFile("Z:\\5.jpg"));
-            previewPicture.AddPicture(Image.FromFile("Z:\\2.jpg"));
-            previewPicture.AddPicture(Image.FromFile("Z:\\3.jpg"));
-            previewPicture.AddPicture(Image.FromFile("Z:\\4.jpg"));
-            previewPicture.AddPicture(Image.FromFile("Z:\\5.jpg"));
-            previewPicture.AddPicture(Image.FromFile("Z:\\2.jpg"));
-            previewPicture.AddPicture(Image.FromFile("Z:\\3.jpg"));
-            previewPicture.AddPicture(Image.FromFile("Z:\\4.jpg"));
-            previewPicture.AddPicture(Image.FromFile("Z:\\5.jpg"));
         }
         public void SetImageUpload(Image image)
         {
             fileUploadPicture.Image = image;
+        }
+
+        public void SetSelectedImage(Image image)
+        {
+            fileSelectedPicture.Image = image;
         }
 
     }
