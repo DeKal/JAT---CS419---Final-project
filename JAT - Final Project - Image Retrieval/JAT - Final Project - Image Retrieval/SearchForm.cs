@@ -10,6 +10,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace JAT___Final_Project___Image_Retrieval
@@ -48,8 +49,11 @@ namespace JAT___Final_Project___Image_Retrieval
                 return;
             }
 
+            String filePath = Path.GetDirectoryName(Application.ExecutablePath) + @"\retrieval engine\image.jpg";
+
             // logic
-            LoadPythonScript(currentFileUploadLink);
+            currentImage.Save(filePath, System.Drawing.Imaging.ImageFormat.Jpeg);
+
             // show result
             this.Hide();
             Program.CurrentResultForm = new ResultForm(currentFileUploadLink);

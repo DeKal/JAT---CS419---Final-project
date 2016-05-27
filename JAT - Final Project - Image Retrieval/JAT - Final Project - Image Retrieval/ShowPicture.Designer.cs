@@ -32,7 +32,7 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.uploadDeleteView1 = new JAT___Final_Project___Image_Retrieval.UploadSearchRedirect();
             this.fileSelectedPicture = new System.Windows.Forms.PictureBox();
-            this.previewPicture = new JAT___Final_Project___Image_Retrieval.PreviewPicture(this.fileSelectedPicture);
+            this.previewPicture = new JAT___Final_Project___Image_Retrieval.PreviewPicture();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.fileUploadPicture = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
@@ -41,6 +41,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.fileSelectedPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileUploadPicture)).BeginInit();
             this.SuspendLayout();
+
+            // init some value
+            JAT___Final_Project___Image_Retrieval.PreviewPicture.setSeletectedImagePictureBox(this.fileSelectedPicture);
+            JAT___Final_Project___Image_Retrieval.UploadSearchRedirect.setSeletectedImagePictureBox(this.fileSelectedPicture);
+
             // 
             // tableLayoutPanel1
             // 
