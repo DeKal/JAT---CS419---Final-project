@@ -34,6 +34,7 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.previewPicture1 = new JAT___Final_Project___Image_Retrieval.PreviewPicture();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -66,6 +67,7 @@
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.uploadDeleteView1, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.previewPicture1, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 421);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -119,6 +121,15 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
+            // previewPicture1
+            // 
+            this.previewPicture1.BackColor = System.Drawing.Color.Transparent;
+            this.previewPicture1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.previewPicture1.Location = new System.Drawing.Point(3, 3);
+            this.previewPicture1.Name = "previewPicture1";
+            this.previewPicture1.Size = new System.Drawing.Size(978, 161);
+            this.previewPicture1.TabIndex = 1;
+            // 
             // ShowPicture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -148,5 +159,6 @@
         private UploadSearchRedirect uploadDeleteView1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private PreviewPicture previewPicture1;
     }
 }
