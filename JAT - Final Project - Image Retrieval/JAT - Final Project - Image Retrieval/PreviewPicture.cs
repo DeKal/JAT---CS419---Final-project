@@ -39,6 +39,9 @@ namespace JAT___Final_Project___Image_Retrieval
             if (!init)
             {
                 // add control
+                tb_layout_preview.ColumnStyles.Clear();
+                tb_layout_preview.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 118F));
+                ++tb_layout_preview.ColumnCount;
                 tb_layout_preview.Controls.Add(tempPanel, 0, 0);
                 init = true;
                 return;
@@ -51,7 +54,7 @@ namespace JAT___Final_Project___Image_Retrieval
             tb_layout_preview.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 118F));
 
             // add control
-            tb_layout_preview.Controls.Add(tempPanel, tb_layout_preview.ColumnCount - 1, 0);
+            tb_layout_preview.Controls.Add(tempPanel, tb_layout_preview.ColumnCount - 2, 0);
         }
 
         private void previewImage(object sender, EventArgs e)
