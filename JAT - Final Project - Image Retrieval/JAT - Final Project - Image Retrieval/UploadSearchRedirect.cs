@@ -22,7 +22,7 @@ namespace JAT___Final_Project___Image_Retrieval
         private void btn_search_Click(object sender, EventArgs e)
         {
             // check if has picture
-            if (ShowPicture.selected.Image == global::JAT___Final_Project___Image_Retrieval.Properties.Resources.default_image)
+            if (ShowPicture.selected.Image == null)
             {
                 MessageBox.Show("No image selected.", "Error");
                 return;
@@ -32,7 +32,9 @@ namespace JAT___Final_Project___Image_Retrieval
             ShowPicture.self.saveSelectedImage();
             SearchForm.LoadPythonScript();
 
+
             ShowPicture.self.SetImageUpload(ShowPicture.selected.Image);
+            ShowPicture.self.SetSelectedImage(null);
 
             // show result
             ShowPicture.preview.reset();

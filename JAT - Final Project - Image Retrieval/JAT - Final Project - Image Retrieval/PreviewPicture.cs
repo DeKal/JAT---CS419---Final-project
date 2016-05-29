@@ -7,20 +7,50 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace JAT___Final_Project___Image_Retrieval
 {
     public partial class PreviewPicture : UserControl
     {
-        bool init = false;
-        Panel currentSelected = null;
-        PictureBox selectedImage = null;
-        public PreviewPicture(PictureBox selectedImage)
+        private bool init = false;
+        private Panel currentSelected = null;
+        public PreviewPicture()
         {
-            this.selectedImage = selectedImage;
             InitializeComponent();
         }
-
+        public void reset()
+        {
+            tb_layout_preview.Controls.Clear();
+            tb_layout_preview.ColumnCount = 1;
+            init = false;
+        }
+        public void loadResultImage()
+        {
+            try
+            {   // Open the text file using a stream reader.
+                using (StreamReader sr = new StreamReader(SearchForm.path + @"\retrieve.txt"))
+                {
+                    // Read the stream to a string, and write the string to the console.
+                    string result = sr.ReadToEnd();
+                    string []lines = result.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.None);
+                    Image temp = null;
+                    foreach(string line in lines)
+                    {
+                        if(line != "")
+                        {
+                            temp = Image.FromFile(SearchForm.path + @"\dataset\" + line);
+                            AddPicture(temp);
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("The file could not be read:");
+                Console.WriteLine(e.Message);
+            }
+        }
         public void AddPicture(Image picture)
         {
             // create new picture box
@@ -70,7 +100,7 @@ namespace JAT___Final_Project___Image_Retrieval
             Panel tempPanel = (Panel) temp.Parent;
             tempPanel.BackColor = Color.BlueViolet;
 
-            selectedImage.Image = ((PictureBox)sender).Image;
+            ShowPicture.self.SetSelectedImage(((PictureBox)sender).Image);
 
             // change current image
             currentSelected = tempPanel;
