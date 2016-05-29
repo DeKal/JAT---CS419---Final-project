@@ -19,23 +19,25 @@ namespace JAT___Final_Project___Image_Retrieval
     {
         private String currentFileUploadLink = null;
         private Image currentImage = null;
-
+        static public String path = Path.GetDirectoryName(Application.ExecutablePath) + @"\code";
+        static public SearchForm self = null;
 
         public SearchForm()
         {
             InitializeComponent();
+            self = this;
             
         }
-        private void LoadPythonScript(string imgLink)
+        
+        static public void LoadPythonScript()
         {
-            string path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             var process = new System.Diagnostics.Process();
             
             System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
-            startInfo.WorkingDirectory = path+"\\code";
+            startInfo.WorkingDirectory = path;
             startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
             startInfo.FileName = "cmd.exe";
-            startInfo.Arguments = "/c python retriever.py " + imgLink;
+            startInfo.Arguments = "/c python retriever.py \"image.jpg\"";
             process.StartInfo = startInfo;
             process.Start();
             process.WaitForExit();
@@ -49,10 +51,11 @@ namespace JAT___Final_Project___Image_Retrieval
                 return;
             }
 
-            String filePath = Path.GetDirectoryName(Application.ExecutablePath) + @"\code\image.jpg";
 
             // logic
-            currentImage.Save(filePath, System.Drawing.Imaging.ImageFormat.Jpeg);
+            File.Delete(path + @"\retrieve.txt");
+            currentImage.Save(path + @"\image.jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
+            LoadPythonScript();
 
             // show result
             this.Hide();

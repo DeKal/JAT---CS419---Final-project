@@ -13,12 +13,6 @@ namespace JAT___Final_Project___Image_Retrieval
 {
     public partial class UploadSearchRedirect : UserControl
     {
-        static private PictureBox selectedImage = null;
-
-        static public void setSeletectedImagePictureBox(PictureBox selectImage)
-        {
-            selectedImage = selectImage;
-        }
 
         public UploadSearchRedirect()
         {
@@ -28,21 +22,21 @@ namespace JAT___Final_Project___Image_Retrieval
         private void btn_search_Click(object sender, EventArgs e)
         {
             // check if has picture
-            if (selectedImage.Image == null)
+            if (ShowPicture.selected.Image == global::JAT___Final_Project___Image_Retrieval.Properties.Resources.default_image)
             {
                 MessageBox.Show("No image selected.", "Error");
                 return;
             }
 
-            String filePath = Path.GetDirectoryName(Application.ExecutablePath) + @"\code\image.jpg";
-
             // logic
-            selectedImage.Image.Save(filePath, System.Drawing.Imaging.ImageFormat.Jpeg);
+            ShowPicture.self.saveSelectedImage();
+            SearchForm.LoadPythonScript();
 
-            //// show result
-            //this.Hide();
-            //Program.CurrentResultForm = new ResultForm(currentFileUploadLink);
-            //Program.CurrentResultForm.Show();
+            ShowPicture.self.SetImageUpload(ShowPicture.selected.Image);
+
+            // show result
+            ShowPicture.preview.reset();
+            ShowPicture.preview.loadResultImage();
         }
 
         private void btn_upload_Click(object sender, EventArgs e)

@@ -20,6 +20,8 @@ namespace JAT___Final_Project___Image_Retrieval
             if (uploadPicLink != null)
             {
                 showPicture.SetImageUpload(uploadPicLink);
+                // load image from result file
+                ShowPicture.preview.loadResultImage();
             }
         }
 
