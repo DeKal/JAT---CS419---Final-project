@@ -49,7 +49,7 @@ namespace JAT___Final_Project___Image_Retrieval
                 return;
             }
 
-            String filePath = Path.GetDirectoryName(Application.ExecutablePath) + @"\retrieval engine\image.jpg";
+            String filePath = Path.GetDirectoryName(Application.ExecutablePath) + @"\code\image.jpg";
 
             // logic
             currentImage.Save(filePath, System.Drawing.Imaging.ImageFormat.Jpeg);
